@@ -8,7 +8,7 @@ use List::MoreUtils qw/any/;
 use File::Which qw/which/;
 use IPC::Open3;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 has 'bin' => (
   is    => 'ro',

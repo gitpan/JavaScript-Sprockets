@@ -9,4 +9,6 @@ requires 'List::MoreUtils' => 0;
 
 test_requires 'Test::More' => 0;
 
+requires_external_bin 'sprocketize';
+
 WriteAll;
