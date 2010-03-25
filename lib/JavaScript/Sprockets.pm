@@ -8,7 +8,7 @@ use List::MoreUtils qw/any/;
 use File::Which qw/which/;
 use IPC::Open3;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 has 'bin' => (
   is    => 'ro',
@@ -69,18 +69,18 @@ JavaScript::Sprockets - create javascript concatenations
 
 =head1 VERSION
 
-Version 0.01
+Version 0.03
 
 =cut
 
 =head1 SYNOPSIS
 
-Create javascript concatenations using the sprockets command-line tool.
+Create javascript concatenations using the sprockets command-line tool. Read more about why using sprockets is useful at L<http://getsprockets.org>.
 
     use JavaScript::Sprockets;
 
     my $sp = JavaScript::Sprockets->new(
-      load_paths => ["src/javascripts"],
+      load_paths => ["src/javascripts", "vendor/jquery"],
     );
 
     # a concatenation of app.js and its requirements
@@ -94,7 +94,7 @@ Optional parameters include
 
 =over 4
 
-=item directory
+=item root
 
 Change to this directory before doing anything.
 
